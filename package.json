@@ -4,7 +4,16 @@
   "description": "Static Blog",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cross-env NODE_ENV=development npm-run-all -l clean --parallel start:*",
+    "start:webpack": "webpack --watch",
+    "start:eleventy": "eleventy --serve",
+    "build": "cross-env NODE_ENV=production npm-run-all -l clean build:*",
+    "build:webpack": "webpack",
+    "build:eleventy": "eleventy",
+    "analyze": "npm-run-all build analyze:*",
+    "analyze:js": "source-map-explorer _site/**/*.js _site/**/*.js.map",
+    "clean": "rimraf _site",
+    "format": "prettier --write **/*.{js,s?css,yml} !_site"
   },
   "keywords": [
     "Static"
@@ -13,14 +22,35 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-img": "^0.7.1",
+    "@11ty/eleventy-navigation": "^0.1.6",
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "cheerio": "^1.0.0-rc.5",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.0.1",
+    "css-minimizer-webpack-plugin": "^1.1.5",
+    "date-fns": "^2.16.1",
+    "eleventy-plugin-error-overlay": "^0.1.2",
+    "html-minifier": "^4.0.0",
+    "markdown-it": "^12.0.4",
+    "markdown-it-anchor": "^7.0.0",
+    "markdown-it-attrs": "^4.0.0",
+    "markdown-it-bracketed-spans": "^1.0.1",
+    "mini-css-extract-plugin": "^1.3.3",
+    "npm-run-all": "^4.1.5",
+    "outdent": "^0.8.0",
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "svg-sprite": "^1.5.0",
+    "vinyl": "^2.2.1",
     "webpack": "^5.11.0",
-    "webpack-cli": "^4.2.0"
+    "webpack-cli": "^4.2.0",
+    "webpack-manifest-plugin": "^3.0.0"
   }
 }
