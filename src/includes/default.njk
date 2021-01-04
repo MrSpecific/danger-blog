@@ -16,6 +16,7 @@
     <meta property="og:description" content="{{ description or site.description }}" />
 
     <link rel="stylesheet" href="{% webpack 'main.css' %}">
+    <script async defer src="{% webpack 'main.js' %}"></script>
   </head>
   <body class="{{ bodyClass }}">
     <main>
@@ -25,6 +26,5 @@
     <footer>
       <p><a href="{{ site.url }}">{% icon "github" %}eleventy-webpack</a> - <time datetime="{{ build.timestamp | formatISO }}">{{ build.timestamp | format("dd LLL yyyy") }}</time></p>
     </footer>
-    <script async defer src="{% webpack 'main.js' %}"></script>
   </body>
 </html>

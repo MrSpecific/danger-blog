@@ -1,6 +1,6 @@
 lang: en
-name: eleventy-webpack
-title: eleventy-webpack
+name: danger-blog
+title: Danger Blog
 # see https://ogp.me/#types
 type: website
 url: https://github.com/clenemt/eleventy-webpack
