@@ -1,0 +1,12 @@
+:root {
+  --blue: darkslateblue;
+  --maroon: #d4431c;
+  --dark-maroon: #87250b;
+
+  --body-bg: antiquewhite;
+  --body-color: var(--maroon);
+
+  --link-color: var(--maroon);
+  --link-color-hover: var(--dark-maroon);
+  --link-color-active: var(--maroon);
+}
