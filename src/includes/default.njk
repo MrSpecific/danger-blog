@@ -26,5 +26,9 @@
     <footer>
       <p><a href="{{ site.url }}">{% icon "github" %}eleventy-webpack</a> - <time datetime="{{ build.timestamp | formatISO }}">{{ build.timestamp | format("dd LLL yyyy") }}</time></p>
     </footer>
+
+    <script type="application/json" id="build-json">
+      {{- build | jsonString | safe -}}
+    </script>
   </body>
 </html>
