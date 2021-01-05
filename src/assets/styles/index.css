@@ -1,6 +1,7 @@
 @import "modern-css-reset";
 
 /* Set project variables & settings such as colors, breakpoints, animation etc. */
+@import "./settings/colors.css";
 @import "./settings/typography.css";
 
 @import "./base/base.css";

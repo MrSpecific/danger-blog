@@ -55,7 +55,26 @@ module.exports = {
           'css-loader',
           {
             loader: 'postcss-loader',
-            options: { postcssOptions: { plugins: [PostCSSPresetEnv] } }
+            options: {
+              postcssOptions: {
+                // plugins: [PostCSSPresetEnv]
+                plugins: {
+                  'postcss-import': {},
+                  'postcss-pxtorem': {
+                    propList: ['*'],
+                  },
+                  'postcss-preset-env': {
+                    // Determines which CSS features to polyfill
+                    // https://github.com/csstools/postcss-preset-env#stage
+                    // https://preset-env.cssdb.org/features
+                    stage: 0,
+                    autoprefixer: {
+                      grid: true,
+                    },
+                  },
+                },
+              }
+            }
           },
           // 'sass-loader'
         ]
