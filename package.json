@@ -54,6 +54,7 @@
     "webpack-manifest-plugin": "^3.0.0"
   },
   "dependencies": {
-    "@hotwired/turbo": "^7.0.0-beta.2"
+    "@hotwired/turbo": "^7.0.0-beta.2",
+    "modern-css-reset": "^1.3.0"
   }
 }

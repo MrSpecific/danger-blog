@@ -1,0 +1,51 @@
+:root {
+  --blue: darkslateblue;
+  --bg-body: antiquewhite;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: var(--body-font-family);
+}
+
+/* A general comment that should be stripped out in production */
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--bg-body);
+  color: var(--blue);
+}
+
+.hero {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+
+  & img {
+    width: 2rem;
+  }
+}
+
+main img {
+  opacity: 0.25
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.icon {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin-right: 0.25em;
+  vertical-align: middle;
+  font-size: 1.5em;
+  fill: currentColor;
+  pointer-events: none;
+}

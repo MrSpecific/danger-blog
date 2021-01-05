@@ -15,6 +15,9 @@
     <meta property="og:site_name" content="{{ name or site.name }}" />
     <meta property="og:description" content="{{ description or site.description }}" />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="{% webpack 'main.css' %}">
     <script async defer src="{% webpack 'main.js' %}"></script>
   </head>
