@@ -37,8 +37,12 @@
     </main>
 
     <footer>
-      <p><a href="{{ site.url }}">{% icon "github" %}eleventy-webpack</a> - <time datetime="{{ build.timestamp | formatISO }}">{{ build.timestamp | format("dd LLL yyyy") }}</time></p>
-      {{ '/src/assets/static/border.svg' | svgContents | safe }}
+      <div class="footer-info">
+        <a href="{{ site.url }}">{% icon "github" %}Danger Blog</a> - <time datetime="{{ build.timestamp | formatISO }}">{{ build.timestamp | format("dd LLL yyyy") }}</time>
+      </div>
+      <div class="footer-decoration">
+        {{ '/src/assets/static/border.svg' | svgContents | safe }}
+      </div>
     </footer>
 
     <script type="application/json" id="build-json">

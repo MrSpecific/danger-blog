@@ -3,6 +3,6 @@ name: danger-blog
 title: Danger Blog
 # see https://ogp.me/#types
 type: website
-url: https://github.com/clenemt/eleventy-webpack
+url: https://github.com/MrSpecific/danger-blog
 image: https://avatars3.githubusercontent.com/u/447956?s=400&v=4
-description: A barebones Eleventy and Webpack boilerplate 🎈.
+description: A static blog using Eleventy and Webpack
