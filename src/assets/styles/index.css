@@ -1,7 +1,12 @@
+/* Modern CSS Reset */
 @import "modern-css-reset";
 
 /* Set project variables & settings such as colors, breakpoints, animation etc. */
 @import "./settings/colors.css";
 @import "./settings/typography.css";
 
+/* Base Styles */
 @import "./base/base.css";
+
+/* Component Styles */
+@import "./components/header.css";

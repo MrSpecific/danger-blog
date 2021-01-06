@@ -22,6 +22,13 @@
     <script async defer src="{% webpack 'main.js' %}"></script>
   </head>
   <body class="{{ bodyClass }}">
+    <header class="header">
+      <a href="/" class="site-logo">
+        {% icon "danger-blog" %}
+        <span class="site-title">Danger Blog</span>
+      </a>
+    </header>
+
     <main>
       {{ content | safe }}
     </main>
