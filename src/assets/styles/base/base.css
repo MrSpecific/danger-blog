@@ -51,10 +51,10 @@ main {
   text-transform: uppercase;
 }
 
-/* img {
+img {
   max-width: 100%;
   height: auto;
-} */
+}
 
 .icon {
   display: inline-block;
