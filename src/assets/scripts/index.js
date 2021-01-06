@@ -10,4 +10,4 @@ if (build.env === "development") {
   });
 }
 // Turbo.visit();
-console.log('Hello world', navigator);
+console.log('Hello world', build.env, navigator);

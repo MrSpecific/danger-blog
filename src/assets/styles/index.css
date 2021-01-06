@@ -3,6 +3,7 @@
 
 /* Set project variables & settings such as colors, breakpoints, animation etc. */
 @import "./settings/colors.css";
+@import "./settings/selectors.css";
 @import "./settings/typography.css";
 
 /* Base Styles */
