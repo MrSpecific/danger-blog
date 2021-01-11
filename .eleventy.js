@@ -4,11 +4,14 @@ const yaml = require('js-yaml');
 const NavigationPlugin = require('@11ty/eleventy-navigation');
 const ErrorOverlayPlugin = require('eleventy-plugin-error-overlay');
 const svgContents = require('eleventy-plugin-svg-contents');
+const { documentToHtmlString } = require('@contentful/rich-text-html-renderer');
 
 const filters = require('./utils/filters');
 const markdown = require('./utils/markdown');
 const shortcodes = require('./utils/shortcodes');
 const transforms = require('./utils/transforms');
+
+require('dotenv').config();
 
 module.exports = (config) => {
   const manifestPath = path.resolve(__dirname, '_site/assets/manifest.json');
@@ -41,6 +44,8 @@ module.exports = (config) => {
   config.addPairedShortcode('markdown', shortcodes.markdown);
   config.addNunjucksAsyncShortcode('image', shortcodes.image);
   config.addNunjucksAsyncShortcode('webpack', shortcodes.webpack);
+  config.addShortcode('documentToHtmlString', documentToHtmlString);
+  config.addShortcode('contentBlock', shortcodes.contentblock);
 
   // Pass-through files
   config.addPassthroughCopy('src/_headers');

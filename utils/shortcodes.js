@@ -3,6 +3,7 @@ const path = require('path');
 const { outdent } = require('outdent');
 const Image = require('@11ty/eleventy-img');
 const markdown = require('./markdown');
+const { documentToHtmlString } = require('@contentful/rich-text-html-renderer');
 
 const iconDefaultSize = 24;
 const defaultSizes = '90vw';
@@ -108,5 +109,19 @@ module.exports = {
         <figcaption>${markdown.renderInline(title)}</figcaption>
       </figure>`
       : picture;
-  }
+  },
+
+  contentblock: (content) => {
+    return `
+      <section class="content">
+        ${ documentToHtmlString(content) }
+      </section>`;
+    // return `
+    //   <section id="${content.fields.sectionLink}">
+    //     <div>
+    //       <h3>${content.fields.sectionTitle}</h3>
+    //       ${ documentToHtmlString(content.fields.content) }
+    //     </div>
+    //   </section>`;
+  },
 };

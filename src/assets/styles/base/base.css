@@ -6,11 +6,11 @@ body {
 }
 
 body {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr 100px;
-  align-items: center;
-  flex-direction: column;
+  /* display: grid; */
+  /* grid-template-columns: 1fr; */
+  /* grid-template-rows: 100px 1fr min-content; */
+  /* align-items: center; */
+  /* flex-direction: column; */
   min-height: 100vh;
   background-color: var(--body-bg);
   color: var(--body-color);
@@ -39,11 +39,12 @@ a {
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  min-height: 40vh;
 }
 
 :--heading {

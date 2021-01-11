@@ -1,3 +1,7 @@
+# Environment
+.env
+.env.*
+
 # Build results
 _site/
 .cache/
