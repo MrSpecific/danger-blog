@@ -113,9 +113,9 @@ module.exports = {
 
   contentblock: (content) => {
     return `
-      <section class="content">
+      <div class="rte">
         ${ documentToHtmlString(content) }
-      </section>`;
+      </div>`;
     // return `
     //   <section id="${content.fields.sectionLink}">
     //     <div>

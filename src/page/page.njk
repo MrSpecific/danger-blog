@@ -1,0 +1,25 @@
+---
+layout: default
+pagination:
+  data: contentful
+  size: 1
+  alias: page
+  addAllPagesToCollections: true
+permalink: "/page/{{ page.title | slug }}/"
+tags: "page"
+htmlClass: html
+bodyClass: body
+
+eleventyComputed:
+  title: "{{ page.title}}"
+---
+<div class="content">
+  <div class="hero">
+    <h1>{{ page.title }}</h1>
+    {% image "eleventy_logo.png", "The possum is Eleventy’s mascot" %}
+  </div>
+
+  <div class="page-content">
+    {% contentBlock page.content %}
+  </div>
+</div>

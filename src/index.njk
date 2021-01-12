@@ -3,22 +3,25 @@ layout: default
 tags: "page"
 htmlClass: html
 bodyClass: body
-title: Hello world
+title: Danger Blog
 ---
-<div class="hero">
-  <h1>{{ page.title }}</h1>
+<div class="content hero">
+  <h1>{{ title }}</h1>
   {% image "eleventy_logo.png", "The possum is Eleventy’s mascot" %}
 </div>
 
-<div class="content" style="color: blue;">
-  {% contentBlock page.content %}
+<div class="content">
+  <h2>Pages</h2>
+  <ul class="nav">
+    {% for page in collections.page %}
+      <li class="nav-item"><a href="{{ page.url }}">{{ page.data.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <h2>Posts</h2>
+  <ul class="nav">
+    {% for post in collections.post %}
+      <li class="nav-item"><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+    {% endfor %}
+  </ul>
 </div>
-
-{#
-<hr>
-{{ contentful | jsonString }}
-</hr> #}
-
-{% for post in collections.post %}
-  <a href="{{ post.url }}">{{ post.data.title }}</a>
-{% endfor %}
