@@ -7,12 +7,12 @@ const init = () => {
 
   class Hello {
     constructor() {
-        this.el = el("h2");
+      this.el = el('h2');
     }
     update(data) {
-        this.el.textContent = "Hello from " + data + "!";
+      this.el.textContent = `Hello from ${data}!`;
     }
-}
+  }
 
   const hello = new Hello();
 
