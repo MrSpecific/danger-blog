@@ -5,7 +5,19 @@ const init = () => {
 
   if (!reDomContainer) return;
 
-  const hello = el("h2", "Hello world from Re:DOM!");
+  class Hello {
+    constructor() {
+        this.el = el("h2");
+    }
+    update(data) {
+        this.el.textContent = "Hello from " + data + "!";
+    }
+}
+
+  const hello = new Hello();
+
+  hello.update('RE:DOM');
+  // const hello = el("h2", "Hello world from Re:DOM!");
   mount(reDomContainer, hello);
 }
 
