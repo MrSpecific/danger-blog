@@ -20,6 +20,13 @@ title: Danger Blog
     {% endfor %}
   </ul>
 
+  <h2>Products</h2>
+  <ul class="nav">
+    {% for product in collections.product %}
+      <li class="nav-item"><a href="{{ product.url }}">{{ product.data.title }}</a></li>
+    {% endfor %}
+  </ul>
+
   <h2>Posts</h2>
   <ul class="nav">
     {% for post in collections.post %}
