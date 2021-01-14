@@ -1,0 +1,27 @@
+---
+layout: default
+pagination:
+  data: contentful-product
+  size: 1
+  alias: product
+  addAllPagesToCollections: true
+permalink: "/product/{{ product.title | slug }}/"
+tags: "product"
+htmlClass: html
+bodyClass: body
+
+eleventyComputed:
+  title: "{{ product.title}}"
+---
+<div class="content">
+  <div class="hero">
+    <h1>{{ product.title }}</h1>
+    {% image "eleventy_logo.png", "The possum is Eleventy’s mascot" %}
+  </div>
+
+  {{ product.productId }}
+
+  <div class="page-content">
+    {% contentBlock product.description %}
+  </div>
+</div>
